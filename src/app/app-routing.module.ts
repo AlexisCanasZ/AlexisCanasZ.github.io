@@ -1,7 +1,13 @@
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'portfolio', component: HomeComponent },
+  { path: '**', pathMatch: 'full', redirectTo: '' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

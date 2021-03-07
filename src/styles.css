@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css';
+
+.font-mono{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.font-serif{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-container{
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #00d2d3;
+  background-color: #181718f1;
+  position: relative;
+  backdrop-filter: blur(2.5px);
+}
+
+.sub-container{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  text-align: center;
+}
+
+.sub-container #title{
+  font-size: 56px;
+}
+
+.sub-container #title #cursor{
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  49%{opacity: 0;}
+  50%{opacity: 1;}
+  99%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
